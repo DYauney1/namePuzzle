@@ -1,0 +1,125 @@
+body {
+  background: #e3e3e3;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: lighter;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+
+}
+
+.noselect {
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+#main {
+  height: 100vh;
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#input {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 22px;
+  height: 1.3em;
+  padding: 0.15em 0.4em 0.1em 0.4em;
+  border-radius: 0.65em;
+  border: 2px solid lightgray;
+  outline: none;
+  text-align: center;
+  width: 300px;
+  
+  transition: 0.4s
+  
+} #input:focus {
+    border-color: darkslategray;
+    box-shadow: 0 0 3px 2px gray;
+}
+
+
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 72%;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  padding: 4px 4%;
+  background: linear-gradient(to right, #e3e3e3, lightgray, lightgray, lightgray, lightgray, lightgray, #e3e3e3);
+  box-shadow: 1px 0 6px gray;
+  font-size: 18px;
+}
+
+footer hr.in {
+  background: transparent;
+  height: 8px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px darkslategray inset;
+  width: 65%;
+  overflow: visible;
+  position: relative;
+  
+} footer hr.in::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 75%;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  content: "";
+  background: darkslategray;
+  border-radius: 1px;
+}
+
+footer hr.out {
+  background: darkslategray;
+  height: 2px;
+  width: 65%;
+  border-radius: 1px;
+  border: none;
+  overflow: visible;
+  position: relative;
+  transition: 0.7s;
+  outline: none;
+  
+} footer hr.out::before {
+  content: "";
+  width: 75%;
+  height: 1px;
+  border-radius: 1px;
+  background: darkslategray;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3px;
+  position: absolute;
+  
+} footer hr.out::after {
+  content: "";
+  width: 75%;
+  height: 1px;
+  border-radius: 1px;
+  background: darkslategray;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3px;
+  position: absolute;
+  
+} footer hr.out:focus, footer hr.out:focus-within {
+  width: 25px;
+}
